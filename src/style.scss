@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+
+body {
+  background-color: orange;
+
+}
+
+
+.loader {
+  width: 50px;
+  height: 50px;
+  background-color: aqua; 
+  border: 5px solid rgb(255, 255, 255);
+  border-right: 5px solid blue;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.spinner img {
+  animation: spin 3s linear infinite;
+  width: 50px;
+  height: 50px;
+}
+
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.spinner-translate img {
+  animation: spin-translate 3s linear infinite;
+  width: 50px;
+  height: 50px;
+}
+
+
+@keyframes spin-translate {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  100% {
+    transform: rotate(360deg) translate(100px, 100px);
+  }
+}
+
+.spinner-scale {
+  width: 50px;
+  height: 50px;
+  animation: spin-scale 3s linear infinite;
+}
+
+
+@keyframes spin-scale {
+  0% {
+    transform: scale(0.1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(0.1);
+  }
+}
+
+.love {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  color: purple;
+  font-family: 'Tilt Neon', sans-serif;
+  font-size: 20px;
+  height: 100vh; 
+  animation: scaleAnimation 2s infinite alternate, colorAnimation 2s infinite alternate;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: red;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.love:hover {
+  animation: rotateAnimation 1s;
+}
+
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
